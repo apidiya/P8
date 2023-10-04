@@ -32,7 +32,7 @@ arrowRight.addEventListener('click', function () {
     console.log('Clic sur la flèche droite');
 });
 
-// Étape 3 : Ajoutez des bullet points au slider
+// Étape 3: Ajoutez des bullet points au slider
 // Je déclare la constante numberOfSlides qui va parcourir le tableau slides en début du code et définir le nombre d' éléments existants.
 const numberOfSlides = slides.length;
 
