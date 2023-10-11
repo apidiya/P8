@@ -26,6 +26,18 @@ const slides = [
   const slideText = document.querySelector('#banner p');
   const dots = [];
   
+    // Ajout d'un event listener pour la flèche droite
+    arrowRight.addEventListener('click', function () {
+      currentIndex = (currentIndex + 1) % numberOfSlides;
+      updateSlide(currentIndex);
+    });
+    
+    // Ajout d'un event listener pour la flèche gauche
+    arrowLeft.addEventListener('click', function () {
+      currentIndex = (currentIndex - 1 + numberOfSlides) % numberOfSlides;
+      updateSlide(currentIndex);
+    });
+    
   // Index de la diapositive actuelle
   let currentIndex = 0;
   
@@ -65,18 +77,6 @@ const slides = [
       updateSlide(currentIndex);
     });
   }
-  
-  // Ajout d'un event listener pour la flèche droite
-  arrowRight.addEventListener('click', function () {
-    currentIndex = (currentIndex + 1) % numberOfSlides;
-    updateSlide(currentIndex);
-  });
-  
-  // Ajout d'un event listener pour la flèche gauche
-  arrowLeft.addEventListener('click', function () {
-    currentIndex = (currentIndex - 1 + numberOfSlides) % numberOfSlides;
-    updateSlide(currentIndex);
-  });
   
   // Appeler la fonction pour initialiser la première diapositive
   updateSlide(currentIndex);
